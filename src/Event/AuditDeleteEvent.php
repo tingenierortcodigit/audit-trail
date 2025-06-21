@@ -26,7 +26,7 @@ class AuditDeleteEvent extends BaseEvent
      */
     public function __construct(string $transactionId, $id, $source, ?string $displayValue, $parentSource = null, $original = [])
     {
-        parent::__construct($transactionId, $id, $source, [], $original, $displayValue);
+        parent::__construct($transactionId, $id, $source, [], [], $displayValue);
     }
 
     /**
