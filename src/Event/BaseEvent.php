@@ -90,4 +90,28 @@ abstract class BaseEvent implements EventInterface
                 'changed' => $this->changed
             ];
     }
+
+    public function __serialize(): array
+    {
+        return [
+            'transactionId' => $this->transactionId,
+            'id' => $this->id,
+            'source' => $this->source,
+            'changed' => $this->changed,
+            'original' => $this->original,
+            'displayValue' => $this->displayValue,
+            'timestamp' => $this->timestamp,
+        ];
+    }
+
+    public function __unserialize(array $data): void
+    {
+        $this->transactionId = $data['transactionId'];
+        $this->id = $data['id'];
+        $this->source = $data['source'];
+        $this->changed = $data['changed'];
+        $this->original = $data['original'];
+        $this->displayValue = $data['displayValue'];
+        $this->timestamp = $data['timestamp'];
+    }
 }
