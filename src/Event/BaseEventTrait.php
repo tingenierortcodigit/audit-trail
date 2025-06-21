@@ -142,7 +142,7 @@ trait BaseEventTrait
     /**
      * @return string
      */
-    public function getDisplayValue(): string
+    public function getDisplayValue(): ?string
     {
         return $this->displayValue;
     }
