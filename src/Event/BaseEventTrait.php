@@ -52,7 +52,7 @@ trait BaseEventTrait
     /**
      * @var string
      */
-    protected string $displayValue;
+    protected ?string $displayValue;
 
     /**
      * Returns the global transaction id in which this event is contained.
