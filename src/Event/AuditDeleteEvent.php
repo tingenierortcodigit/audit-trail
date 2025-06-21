@@ -24,7 +24,7 @@ class AuditDeleteEvent extends BaseEvent
      * @param array $original The original values the entity had before it got changed
      * @param string|null $displayValue The displa field's value
      */
-    public function __construct(string $transactionId, $id, $source, $parentSource = null, $original = [], ?string $displayValue)
+    public function __construct(string $transactionId, $id, $source, ?string $displayValue, $parentSource = null, $original = [])
     {
         parent::__construct($transactionId, $id, $source, [], $original, $displayValue);
     }
