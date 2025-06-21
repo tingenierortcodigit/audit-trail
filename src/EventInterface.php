@@ -65,5 +65,5 @@ interface EventInterface extends JsonSerializable, Serializable
      *
      * @return string
      */
-    public function getDisplayValue(): string;
+    public function getDisplayValue(): ?string;
 }
